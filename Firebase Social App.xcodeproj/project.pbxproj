@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		D5DFFED81DFF800A008474EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DFFED71DFF800A008474EB /* AppDelegate.swift */; };
-		D5DFFEDA1DFF800A008474EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DFFED91DFF800A008474EB /* ViewController.swift */; };
+		D5DFFEDA1DFF800A008474EB /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DFFED91DFF800A008474EB /* SignInVC.swift */; };
 		D5DFFEDD1DFF800A008474EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5DFFEDB1DFF800A008474EB /* Main.storyboard */; };
 		D5DFFEDF1DFF800A008474EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5DFFEDE1DFF800A008474EB /* Assets.xcassets */; };
 		D5DFFEE21DFF800A008474EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5DFFEE01DFF800A008474EB /* LaunchScreen.storyboard */; };
+		D5DFFEEA1DFF8012008474EB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5DFFEE91DFF8012008474EB /* GoogleService-Info.plist */; };
+		D8BEAA632FC681D5A86C9314 /* Pods_Firebase_Social_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3818535569A2CEE945726EC3 /* Pods_Firebase_Social_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3818535569A2CEE945726EC3 /* Pods_Firebase_Social_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firebase_Social_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DFFED41DFF800A008474EB /* Firebase Social App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase Social App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DFFED71DFF800A008474EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D5DFFED91DFF800A008474EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D5DFFED91DFF800A008474EB /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		D5DFFEDC1DFF800A008474EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5DFFEDE1DFF800A008474EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5DFFEE11DFF800A008474EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5DFFEE31DFF800A008474EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5DFFEE91DFF8012008474EB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EBED1A7A2990156C5C23B8B9 /* Pods-Firebase Social App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase Social App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Firebase Social App/Pods-Firebase Social App.debug.xcconfig"; sourceTree = "<group>"; };
+		F44AA6D50A382E2D853011FE /* Pods-Firebase Social App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase Social App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Firebase Social App/Pods-Firebase Social App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8BEAA632FC681D5A86C9314 /* Pods_Firebase_Social_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B043F45342386CC524D4B89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3818535569A2CEE945726EC3 /* Pods_Firebase_Social_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D5DFFECB1DFF800A008474EB = {
 			isa = PBXGroup;
 			children = (
 				D5DFFED61DFF800A008474EB /* Firebase Social App */,
 				D5DFFED51DFF800A008474EB /* Products */,
+				EA71A42A88D393A49A275BD8 /* Pods */,
+				7B043F45342386CC524D4B89 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +71,48 @@
 		D5DFFED61DFF800A008474EB /* Firebase Social App */ = {
 			isa = PBXGroup;
 			children = (
+				D5DFFEEB1DFF81DB008474EB /* Model */,
+				D5DFFEEC1DFF81E0008474EB /* View */,
+				D5DFFEED1DFF81E5008474EB /* Controller */,
 				D5DFFED71DFF800A008474EB /* AppDelegate.swift */,
-				D5DFFED91DFF800A008474EB /* ViewController.swift */,
 				D5DFFEDB1DFF800A008474EB /* Main.storyboard */,
 				D5DFFEDE1DFF800A008474EB /* Assets.xcassets */,
 				D5DFFEE01DFF800A008474EB /* LaunchScreen.storyboard */,
 				D5DFFEE31DFF800A008474EB /* Info.plist */,
+				D5DFFEE91DFF8012008474EB /* GoogleService-Info.plist */,
 			);
 			path = "Firebase Social App";
+			sourceTree = "<group>";
+		};
+		D5DFFEEB1DFF81DB008474EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D5DFFEEC1DFF81E0008474EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D5DFFEED1DFF81E5008474EB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D5DFFED91DFF800A008474EB /* SignInVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EA71A42A88D393A49A275BD8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EBED1A7A2990156C5C23B8B9 /* Pods-Firebase Social App.debug.xcconfig */,
+				F44AA6D50A382E2D853011FE /* Pods-Firebase Social App.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5DFFEE61DFF800A008474EB /* Build configuration list for PBXNativeTarget "Firebase Social App" */;
 			buildPhases = (
+				DC7EAA437A5FC128014BEFC0 /* 📦 Check Pods Manifest.lock */,
 				D5DFFED01DFF800A008474EB /* Sources */,
 				D5DFFED11DFF800A008474EB /* Frameworks */,
 				D5DFFED21DFF800A008474EB /* Resources */,
+				DACE3EA29D919B20B65996A8 /* 📦 Embed Pods Frameworks */,
+				C97BDFD630F28ECEA41816D0 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5DFFEE21DFF800A008474EB /* LaunchScreen.storyboard in Resources */,
+				D5DFFEEA1DFF8012008474EB /* GoogleService-Info.plist in Resources */,
 				D5DFFEDF1DFF800A008474EB /* Assets.xcassets in Resources */,
 				D5DFFEDD1DFF800A008474EB /* Main.storyboard in Resources */,
 			);
@@ -132,12 +187,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C97BDFD630F28ECEA41816D0 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Firebase Social App/Pods-Firebase Social App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DACE3EA29D919B20B65996A8 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Firebase Social App/Pods-Firebase Social App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC7EAA437A5FC128014BEFC0 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D5DFFED01DFF800A008474EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5DFFEDA1DFF800A008474EB /* ViewController.swift in Sources */,
+				D5DFFEDA1DFF800A008474EB /* SignInVC.swift in Sources */,
 				D5DFFED81DFF800A008474EB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +360,7 @@
 		};
 		D5DFFEE71DFF800A008474EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBED1A7A2990156C5C23B8B9 /* Pods-Firebase Social App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CJJ9766P8D;
@@ -270,6 +374,7 @@
 		};
 		D5DFFEE81DFF800A008474EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F44AA6D50A382E2D853011FE /* Pods-Firebase Social App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CJJ9766P8D;
@@ -300,6 +405,7 @@
 				D5DFFEE81DFF800A008474EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
